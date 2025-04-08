@@ -59,7 +59,7 @@ class ClassificationModel:
                 ('cat_imp', SimpleImputer(strategy='constant', fill_value='missing', add_indicator=False)), # don't add missing columns
                 # ('cat_imp',IterativeImputer(estimator=RandomForestClassifier(), initial_strategy='most_frequent',
                 #               max_iter=10, random_state=0)), # random forest classifier to impute
-                ('cat_ohe', OneHotEncoder(handle_unknown='ignore', sparse=False)) # don't set up as sparse matrix
+                ('cat_ohe', OneHotEncoder(handle_unknown='ignore')) # don't set up as sparse matrix
             ]
         )
         
